@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Window Control Example</title>
+    <script>
+      function manipulateWindow() {
+        // 1 Відкрити нове вікно розміром 410х410 пікселів
+        let newWindow = window.open("", "newWindow", "width=410,height=410");
+
+        // Затримка 2 секунди, потім змінити розмір вікна на 500х500 пікселів
+        setTimeout(function () {
+          newWindow.resizeTo(500, 500);
+        }, 2000);
+
+        // Затримка 2 секунди, потім перемістити вікно до точки з координатами (200, 200)
+        setTimeout(function () {
+          newWindow.moveTo(200, 200);
+        }, 4000);
+
+        //  Затримка 2 секунди, потім закрити вікно
+        setTimeout(function () {
+          newWindow.close();
+        }, 6000);
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="manipulateWindow()">Open and Manipulate Window</button>
+  </body>
+</html>
